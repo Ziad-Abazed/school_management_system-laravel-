@@ -41,12 +41,12 @@ return new class extends Migration
             $table->string('Address_Mother');
             $table->timestamps();
 
-            $table->foreign('Nationality_Father_id')->references('id')->on('nationalities');
-            $table->foreign('Blood_Type_Father_id')->references('id')->on('type_bloods');
-            $table->foreign('Religion_Father_id')->references('id')->on('religions');
-            $table->foreign('Nationality_Mother_id')->references('id')->on('nationalities');
-            $table->foreign('Blood_Type_Mother_id')->references('id')->on('type_bloods');
-            $table->foreign('Religion_Mother_id')->references('id')->on('religions');
+            $table->foreign('Nationality_Father_id')->references('id')->on('nationalities')->onDelete('cascade');
+            $table->foreign('Blood_Type_Father_id')->references('id')->on('type_bloods')->onDelete('cascade');
+            $table->foreign('Religion_Father_id')->references('id')->on('religions')->onDelete('cascade');
+            $table->foreign('Nationality_Mother_id')->references('id')->on('nationalities')->onDelete('cascade');
+            $table->foreign('Blood_Type_Mother_id')->references('id')->on('type_bloods')->onDelete('cascade');
+            $table->foreign('Religion_Mother_id')->references('id')->on('religions')->onDelete('cascade');
         });
     }
 

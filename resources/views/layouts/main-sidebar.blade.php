@@ -75,18 +75,18 @@
 
 
 
-                    <!-- Teachers-->
-                    <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Teachers-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i></i><span
-                                    class="right-nav-text">{{ trans('main_trans.Teachers') }}</span></div>
-                            <div class="pull-right"><i class="ti-plus"></i></div>
-                            <div class="clearfix"></div>
-                        </a>
-                        <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="">{{ trans('main_trans.List_Teachers') }}</a> </li>
-                        </ul>
-                    </li>
+                        <!-- Teachers-->
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#Teachers-menu">
+                                <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i></i><span
+                                        class="right-nav-text">{{trans('main_trans.Teachers')}}</span></div>
+                                <div class="pull-right"><i class="ti-plus"></i></div>
+                                <div class="clearfix"></div>
+                            </a>
+                            <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
+                                <li> <a href="{{route('Teachers.index')}}">{{trans('main_trans.List_Teachers')}}</a> </li>
+                            </ul>
+                        </li>
 
 
                     <!-- Parents-->
