@@ -29,9 +29,38 @@
                 <td>
                     <button wire:click="edit({{ $my_parent->id }})" title="{{ trans('Grades_trans.Edit') }}"
                             class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-                    <button type="button" class="btn btn-danger btn-sm" wire:click="delete({{ $my_parent->id }})" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>
-                </td>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete({{ $my_parent->id }})" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>
+                           
             </tr>
+
+             <div class="modal fade" id="delete({{ $my_parent->id }})" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <form >
+                        {{method_field('delete')}}
+                        {{csrf_field()}}
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">{{ trans('Grades_trans.Delete') }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p> {{ trans('My_Classes_trans.Warning_Grade') }}</p>
+                            <input type="hidden" name="id"  value="{{ $my_parent->id }}">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                        data-dismiss="modal">{{ trans('My_Classes_trans.Close') }}</button>
+                                <button type="submit" wire:click="delete({{ $my_parent->id }})"
+                                        class="btn btn-danger">{{ trans('My_Classes_trans.submit') }}</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div> 
         @endforeach
     </table>
 </div>

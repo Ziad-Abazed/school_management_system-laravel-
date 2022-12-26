@@ -217,9 +217,34 @@ class AddParent extends Component
         if ($this->Parent_id){
             $parent = My_Parent::find($this->Parent_id);
             $parent->update([
-                'Passport_ID_Father' => $this->Passport_ID_Father,
+                'Email' => $this->Email,
+                'Password' => Hash::make($this->Password),
+                'Name_Father' => ['en' => $this->Name_Father_en, 'ar' => $this->Name_Father],
                 'National_ID_Father' => $this->National_ID_Father,
+                'Passport_ID_Father' => $this->Passport_ID_Father,
+                'Phone_Father' => $this->Phone_Father,
+                'Job_Father' => ['en' => $this->Job_Father_en, 'ar' => $this->Job_Father],
+                'Nationality_Father_id' => $this->Nationality_Father_id,
+                'Blood_Type_Father_id' => $this->Blood_Type_Father_id,
+                'Religion_Father_id' => $this->Religion_Father_id,
+                'Address_Father' => $this->Address_Father,
+    
+                // Mother_INPUTS
+                'Name_Mother' => ['en' => $this->Name_Mother_en, 'ar' => $this->Name_Mother],
+                'National_ID_Mother' => $this->National_ID_Mother,
+                'Passport_ID_Mother' => $this->Passport_ID_Mother,
+                'Phone_Mother' => $this->Phone_Mother,
+                'Job_Mother' => ['en' => $this->Job_Mother_en, 'ar' => $this->Job_Mother],
+                'Passport_ID_Mother' => $this->Passport_ID_Mother,
+                'Nationality_Mother_id' => $this->Nationality_Mother_id,
+                'Blood_Type_Mother_id' => $this->Blood_Type_Mother_id,
+                'Religion_Mother_id' => $this->Religion_Mother_id,
+                'Address_Mother' => $this->Address_Mother,
             ]);
+            
+
+                
+       
 
         }
 

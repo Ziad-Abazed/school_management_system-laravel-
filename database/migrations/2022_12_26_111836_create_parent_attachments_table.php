@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('file_name')->nullable();
             $table->bigInteger('parent_id')->unsigned();
-            $table->foreign('parent_id')->references('id')->on('my__parents');
+            $table->foreign('parent_id')->references('id')->on('my__parents')->onDelete('cascade');
             $table->timestamps();
         });
     }
