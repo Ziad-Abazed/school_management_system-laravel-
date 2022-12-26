@@ -4,16 +4,20 @@ namespace App\Http\Livewire;
 
 use App\Models\My_Parent;
 use App\Models\Nationalitie;
+use App\Models\ParentAttachment;
 use App\Models\Religion;
 use App\Models\Type_blood;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class AddParent extends Component
 {
+    use WithFileUploads;
+
     public $successMessage = '';
 
-    public $catchError;
+    public $catchError,$updateMode = false,$photos;
 
     public $currentStep = 1,
 
@@ -39,10 +43,10 @@ class AddParent extends Component
             'Email' => 'required|email',
             'National_ID_Father' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
             'Passport_ID_Father' => 'min:10|max:10',
-            'Phone_Father' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'Phone_Father' => 'min:10|max:10|regex:/^([0-9\s\-\+\(\)]*)$/',
             'National_ID_Mother' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
             'Passport_ID_Mother' => 'min:10|max:10',
-            'Phone_Mother' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
+            'Phone_Mother' => 'min:10|max:10|regex:/^([0-9\s\-\+\(\)]*)$/'
         ]);
     }
 
@@ -69,7 +73,7 @@ class AddParent extends Component
             'Job_Father_en' => 'required',
             'National_ID_Father' => 'required|unique:my__parents,National_ID_Father,' . $this->id,
             'Passport_ID_Father' => 'required|unique:my__parents,Passport_ID_Father,' . $this->id,
-            'Phone_Father' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'Phone_Father' => 'required',
             'Nationality_Father_id' => 'required',
             'Blood_Type_Father_id' => 'required',
             'Religion_Father_id' => 'required',
@@ -129,8 +133,17 @@ class AddParent extends Component
             $My_Parent->Blood_Type_Mother_id = $this->Blood_Type_Mother_id;
             $My_Parent->Religion_Mother_id = $this->Religion_Mother_id;
             $My_Parent->Address_Mother = $this->Address_Mother;
-
             $My_Parent->save();
+
+            if (!empty($this->photos)){
+                foreach ($this->photos as $photo) {
+                    $photo->storeAs($this->National_ID_Father, $photo->getClientOriginalName(), $disk = 'parent_attachments');
+                    ParentAttachment::create([
+                        'file_name' => $photo->getClientOriginalName(),
+                        'parent_id' => My_Parent::latest()->first()->id,
+                    ]);
+                }
+            }
             $this->successMessage = trans('messages.success');
             $this->clearForm();
             $this->currentStep = 1;
