@@ -98,7 +98,7 @@
                                                                     </tr>
 
 
-                                                                    <!--edit section model-->
+                                                                    <!--تعديل قسم جديد -->
                                                                     <div class="modal fade"
                                                                          id="edit{{ $list_Sections->id }}"
                                                                          tabindex="-1" role="dialog"
@@ -203,7 +203,20 @@
                                                                                                 @endif
                                                                                                 <label
                                                                                                     class="form-check-label"
-                                                                                                    for="exampleCheck1">{{ trans('Sections_trans.Status') }}</label>
+                                                                                                    for="exampleCheck1">{{ trans('Sections_trans.Status') }}</label><br>
+
+                                                                                                    <div class="col">
+                                                                                                        <label for="inputName" class="control-label">{{ trans('Sections_trans.Name_Teacher') }}</label>
+                                                                                                        <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                                                                            @foreach($list_Sections->teachers as $teacher)
+                                                                                                                <option selected value="{{$teacher['id']}}">{{$teacher['Name']}}</option>
+                                                                                                            @endforeach
+
+                                                                                                            @foreach($teachers as $teacher)
+                                                                                                                <option value="{{$teacher->id}}">{{$teacher->Name}}</option>
+                                                                                                            @endforeach
+                                                                                                        </select>
+                                                                                                    </div>
                                                                                             </div>
                                                                                         </div>
 
@@ -259,7 +272,7 @@
                                                                                                     class="btn btn-secondary"
                                                                                                     data-dismiss="modal">{{ trans('Sections_trans.Close') }}</button>
                                                                                             <button type="submit"
-                                                                                                    class="btn btn-danger">{{ trans('Sections_trans.Delete') }}</button>
+                                                                                                    class="btn btn-danger">{{ trans('Sections_trans.submit') }}</button>
                                                                                         </div>
                                                                                     </form>
                                                                                 </div>
@@ -284,7 +297,7 @@
                         </div>
                     </div>
 
-                    <!--add new section -->
+                    <!--اضافة قسم جديد -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalLabel"
                          aria-hidden="true">
@@ -339,6 +352,15 @@
                                                    class="control-label">{{ trans('Sections_trans.Name_Class') }}</label>
                                             <select name="Class_id" class="custom-select">
 
+                                            </select>
+                                        </div><br>
+
+                                        <div class="col">
+                                            <label for="inputName" class="control-label">{{ trans('Sections_trans.Name_Teacher') }}</label>
+                                            <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                @foreach($teachers as $teacher)
+                                                    <option value="{{$teacher->id}}">{{$teacher->Name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
 
