@@ -21,7 +21,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return $this->Student->Get_Student();
     }
 
     /**
@@ -64,7 +64,7 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return $this->Student->Edit_Student($id);
     }
 
     /**
@@ -76,8 +76,9 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->Student->Update_Student($request);
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -87,7 +88,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $this->Student->Delete_Student($request);
     }
 
     public function Get_classrooms($id)
