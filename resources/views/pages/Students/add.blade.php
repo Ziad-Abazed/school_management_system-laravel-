@@ -19,16 +19,6 @@
         <div class="card card-statistics h-100">
             <div class="card-body">
 
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
                 <form method="post"  action="{{ route('Students.store') }}" autocomplete="off">
                     @csrf
                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Students_trans.personal_information')}}</h6><br>
@@ -37,13 +27,20 @@
                                 <div class="form-group">
                                     <label>{{trans('Students_trans.name_ar')}} : <span class="text-danger">*</span></label>
                                     <input  type="text" name="name_ar"  class="form-control">
+                                    @error('name_ar')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>{{trans('Students_trans.name_en')}} : <span class="text-danger">*</span></label>
                                     <input  class="form-control" name="name_en" type="text" >
+                                    @error('name_en')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
@@ -53,6 +50,9 @@
                                 <div class="form-group">
                                     <label>{{trans('Students_trans.email')}} : </label>
                                     <input type="email"  name="email" class="form-control" >
+                                    @error('email')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -61,6 +61,9 @@
                                 <div class="form-group">
                                     <label>{{trans('Students_trans.password')}} :</label>
                                     <input  type="password" name="password" class="form-control" >
+                                    @error('password')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -73,6 +76,9 @@
                                             <option  value="{{ $Gender->id }}">{{ $Gender->Name }}</option>
                                         @endforeach
                                     </select>
+                                    @error('gender_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -85,7 +91,11 @@
                                             <option  value="{{ $nal->id }}">{{ $nal->Name }}</option>
                                         @endforeach
                                     </select>
+                                    @error('nationalitie_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+                              
                             </div>
 
                             <div class="col-md-3">
@@ -97,6 +107,9 @@
                                             <option value="{{ $bg->id }}">{{ $bg->Name }}</option>
                                         @endforeach
                                     </select>
+                                    @error('blood_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -104,6 +117,9 @@
                                 <div class="form-group">
                                     <label>{{trans('Students_trans.Date_of_Birth')}}  :</label>
                                     <input class="form-control" type="text"  id="datepicker-action" name="Date_Birth" data-date-format="yyyy-mm-dd">
+                                    @error('Date_Birth')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -119,7 +135,11 @@
                                         @foreach($my_classes as $c)
                                             <option  value="{{ $c->id }}">{{ $c->Name }}</option>
                                         @endforeach
+                                      
                                     </select>
+                                    @error('Grade_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -129,6 +149,9 @@
                                     <select class="custom-select mr-sm-2" name="Classroom_id">
 
                                     </select>
+                                    @error('Classroom_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -138,6 +161,9 @@
                                     <select class="custom-select mr-sm-2" name="section_id">
 
                                     </select>
+                                    @error('section_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -150,6 +176,9 @@
                                             <option value="{{ $parent->id }}">{{ $parent->Name_Father }}</option>
                                         @endforeach
                                     </select>
+                                    @error('parent_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -165,6 +194,9 @@
                                         <option value="{{ $year}}">{{ $year }}</option>
                                     @endfor
                                 </select>
+                                @error('academic_year')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         </div><br>

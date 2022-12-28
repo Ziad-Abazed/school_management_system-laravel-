@@ -39,4 +39,24 @@ class StoreStudentsRequest extends FormRequest
             'academic_year' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'email.required' => trans('validation.required'),
+            'email.unique' => trans('validation.unique'),
+            'password.required' => trans('validation.required'),
+            'name_ar.required' => trans('validation.required'),
+            'name_en.required' => trans('validation.required'),
+            'gender_id.required' => trans('validation.required'),
+            'nationalitie_id.required' => trans('validation.required'),
+            'blood_id.required' => trans('validation.required'),
+            'Date_Birth.required' => trans('validation.required'),
+            'Grade_id.required' => trans('validation.required'),
+            'Classroom_id.required' => trans('validation.required'),
+            'section_id.required' => trans('validation.required'),
+            'parent_id.required' => trans('validation.required'),
+            'academic_year.required' => trans('validation.required'),
+        ];
+    }
 }
