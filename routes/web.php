@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\GraduatedController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
@@ -79,6 +80,7 @@ Route::view('add_parent','livewire.show_Form');
     Route::post('Delete_attachment',[StudentController::class,'Delete_attachment'])->name('Delete_attachment');
 
     Route::resource('Promotion', PromotionController::class);
+    Route::resource('Graduated', GraduatedController::class);
     });
 
 
