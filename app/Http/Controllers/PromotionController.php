@@ -6,7 +6,8 @@ use App\Repository\StudentPromotionRepositoryInterface;
 use Illuminate\Http\Request;
 
 class PromotionController extends Controller
-{  protected $Promotion;
+{
+    protected $Promotion;
     public function __construct(StudentPromotionRepositoryInterface $Promotion)
     {
         $this->Promotion = $Promotion;

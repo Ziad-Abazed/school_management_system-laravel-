@@ -5,7 +5,7 @@ namespace App\Repository;
 
 
 use App\Models\Grade;
-use App\Models\promotion;
+use App\Models\Promotion;
 use App\Models\Student;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -21,7 +21,7 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
 
     public function create()
     {
-        $promotions = promotion::all();
+        $promotions = Promotion::all();
         return view('pages.Students.promotion.management',compact('promotions'));
     }
 
@@ -104,6 +104,24 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                 toastr()->error(trans('messages.Delete'));
                 return redirect()->back();
 
+            }
+
+            else{
+
+                $Promotion = Promotion::findorfail($request->id);
+                student::where('id', $Promotion->student_id)
+                    ->update([
+                        'Grade_id'=>$Promotion->from_grade,
+                        'Classroom_id'=>$Promotion->from_Classroom,
+                        'section_id'=> $Promotion->from_section,
+                        'academic_year'=>$Promotion->academic_year,
+                    ]);
+
+
+                Promotion::destroy($request->id);
+                DB::commit();
+                toastr()->error(trans('messages.Delete'));
+                return redirect()->back();
 
             }
 
@@ -114,4 +132,6 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }
+
+
 }

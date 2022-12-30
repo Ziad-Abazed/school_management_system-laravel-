@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Promotion extends Model
 {
-    use HasFactory;
     protected $guarded=[];
 
     public function student()
@@ -58,6 +57,11 @@ class Promotion extends Model
     {
         return $this->belongsTo('App\Models\Section', 'to_section');
     }
+
+
+
+
+
 
 
 

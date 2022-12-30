@@ -36,14 +36,14 @@
                                         <tr>
                                             <th class="alert-info">#</th>
                                             <th class="alert-info">{{trans('Students_trans.name')}}</th>
-                                            <th class="alert-danger"> {{trans('Students_trans.previous_school_stage')}}</th>
-                                            <th class="alert-danger">{{trans('Students_trans.previous_academic_year')}}</th>
-                                            <th class="alert-danger">  {{trans('Students_trans.previous_class')}}</th>
-                                            <th class="alert-danger">  {{trans('Students_trans.previous_academic_section')}}</th>
-                                            <th class="alert-success">  {{trans('Students_trans.current_school_stage')}}</th>
-                                            <th class="alert-success">  {{trans('Students_trans.current_academic_year')}}</th>
-                                            <th class="alert-success">  {{trans('Students_trans.current_class')}}</th>
-                                            <th class="alert-success"> {{trans('Students_trans.The_current_academic_section')}}</th>
+                                            <th class="alert-danger">المرحلة الدراسية السابقة</th>
+                                            <th class="alert-danger">السنة الدراسية</th>
+                                            <th class="alert-danger">الصف الدراسي السابق</th>
+                                            <th class="alert-danger">القسم الدراسي السابق</th>
+                                            <th class="alert-success">المرحلة الدراسية الحالي</th>
+                                            <th class="alert-success">السنة الدراسية الحالية</th>
+                                            <th class="alert-success">الصف الدراسي الحالي</th>
+                                            <th class="alert-success">القسم الدراسي الحالي</th>
                                             <th>{{trans('Students_trans.Processes')}}</th>
                                         </tr>
                                         </thead>
@@ -61,20 +61,13 @@
                                                 <td>{{$promotion->t_classroom->Name_Class}}</td>
                                                 <td>{{$promotion->t_section->Name_Section}}</td>
                                                 <td>
-                                                    <a href="{{route('Students.edit',$promotion->id)}}"
-                                                       class="btn btn-info btn-sm" role="button" aria-pressed="true"><i
-                                                            class="fa fa-edit"></i></a>
-                                                    <button type="button" class="btn btn-danger btn-sm"
-                                                            data-toggle="modal"
-                                                            data-target="#Delete_Student{{ $promotion->id }}"
-                                                            title="{{ trans('Grades_trans.Delete') }}"><i
-                                                            class="fa fa-trash"></i></button>
-                                                    <a href="{{route('Students.show',$promotion->id)}}"
-                                                       class="btn btn-warning btn-sm" role="button" aria-pressed="true"><i
-                                                            class="far fa-eye"></i></a>
+
+                                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Delete_one{{$promotion->id}}">ارجاع الطالب</button>
+                                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#">تخرج الطالب</button>
                                                 </td>
                                             </tr>
-                                   @include('pages.Students.promotion.Delete_all')
+                                        @include('pages.Students.promotion.Delete_all')
+                                        @include('pages.Students.promotion.Delete_one')
                                         @endforeach
                                     </table>
                                 </div>
