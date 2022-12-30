@@ -30,7 +30,15 @@ return [
     'created_at' => 'تاريخ الاضافة',
     'Download' => 'تحميل',
     'delete' => 'حذف',
-    'Attachments'=>'اضافة مرفقات الطالب'
+    'Attachments'=>'اضافة مرفقات الطالب',
+    'current_school_stage'=>'المرحلة الدراسية الحالية',
+    'current_academic_year'=>'السنة الدراسية الحالية',
+    'The_current_academic_section'=>'القسم الدراسي الحالي',
+    'current_class'=>'الصف الدارسي الحالي',
+    'previous_class'=>'الصف الدراسي السابق',
+    'previous_academic_section'=>'القسم الدراسي السابق',
+    'previous_academic_year'=>'السنة الدراسية السابقة',
+    'previous_school_stage'=>'المرحلة الدراسية السابقة'
 
 
 ];

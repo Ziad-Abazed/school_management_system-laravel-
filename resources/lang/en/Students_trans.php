@@ -30,6 +30,20 @@ return [
     'created_at' => 'created_at',
     'Download' => 'Download',
     'delete' => 'Delete',
-     'Attachments'=>'add student Attachments'
+    'Attachments' => 'add student Attachments',
+    'current_school_stage' => 'current school stage',
+    'current_academic_year' => 'current academic year',
+    'The_current_academic_section' => 'current academic section',
+    'current_class' => 'current class',
+    'previous_class' => 'previous class',
+    'previous_academic_section' => 'previous academic section',
+    'previous_academic_year' => 'previous academic year',
+    'previous_school_stage' => 'previous school stage'
+
+
+
+
+
+
 
 ];

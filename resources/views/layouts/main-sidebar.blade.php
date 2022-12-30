@@ -58,8 +58,8 @@
                         </ul>
                     </li>
 
-                  <!-- students-->
-                  <li>
+                 <!-- students-->
+                 <li>
                     <a href="javascript:void(0);" data-toggle="collapse" data-target="#students-menu">
                         <div class="pull-left"><i class="fas fa-user-graduate"></i><span
                                 class="right-nav-text">{{trans('main_trans.students')}}</span></div>
@@ -70,6 +70,7 @@
                         <li> <a href="{{route('Students.create')}}">{{trans('main_trans.add_student')}}</a> </li>
                         <li> <a href="{{route('Students.index')}}">{{trans('main_trans.list_students')}}</a> </li>
                         <li> <a href="{{route('Promotion.index')}}">{{trans('main_trans.Students_Promotions')}}</a> </li>
+                        <li> <a href="{{route('Promotion.create')}}">{{trans('main_trans.Students_Promotions_management')}}</a> </li>
                     </ul>
                 </li>
 

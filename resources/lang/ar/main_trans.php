@@ -15,6 +15,7 @@ return [
     'students'=>'الطلاب',
     'add_student'=>'اضافة طالب جديد',
     'list_students'=>'قائمة الطلاب',
+    'Students_Promotions'=>'ترقية الطلاب',
     'Teachers'=>'المعلمين',
     'List_Teachers' => 'قائمة المعلمين',
     'Parents'=>'اولياء الامور',
@@ -28,7 +29,8 @@ return [
     'Settings'=>'الاعدادات',
     'Users'=>'المستخدمين',
     'Copyright' => 'جميع الحقوق محفوظة ',
-    'Name_Programer' => 'زياد ابازيد'
+    'Name_Programer' => 'زياد ابازيد',
+    'Students_Promotions_management'=>'ادارة ترقية الطلاب'
 
 
 ];
