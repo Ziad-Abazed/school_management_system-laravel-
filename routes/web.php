@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\FeesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
 use App\Http\Controllers\PromotionController;
@@ -81,6 +82,8 @@ Route::view('add_parent','livewire.show_Form');
 
     Route::resource('Promotion', PromotionController::class);
     Route::resource('Graduated', GraduatedController::class);
+    Route::resource('Fees', FeesController::class);
+
     });
 
 

@@ -63,11 +63,11 @@
                                                 <td>
 
                                                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Delete_one{{$promotion->id}}">ارجاع الطالب</button>
-                                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#">تخرج الطالب</button>
                                                 </td>
                                             </tr>
                                         @include('pages.Students.promotion.Delete_all')
                                         @include('pages.Students.promotion.Delete_one')
+                                       
                                         @endforeach
                                     </table>
                                 </div>

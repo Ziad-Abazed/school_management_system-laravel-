@@ -14,6 +14,8 @@ interface StudentGraduatedRepositoryInterface
     // update Students to SoftDelete
     public function SoftDelete($request);
 
+    public function SoftDeleteForOneStudent($request);
+
     // ReturnData Students
     public function ReturnData($request);
 

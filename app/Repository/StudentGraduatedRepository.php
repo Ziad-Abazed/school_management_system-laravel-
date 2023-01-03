@@ -54,4 +54,12 @@ class StudentGraduatedRepository implements StudentGraduatedRepositoryInterface
     }
 
 
+    public function SoftDeleteForOneStudent($request)
+    {
+        student::onlyTrashed()->where('id', $request->id)->first()->Delete();
+        toastr()->success(trans('messages.success'));
+        return redirect()->back();
+    }
+
+
 }
