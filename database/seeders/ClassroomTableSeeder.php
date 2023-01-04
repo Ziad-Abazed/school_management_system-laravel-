@@ -17,18 +17,18 @@ class ClassroomTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('classrooms')->delete();
-        $classrooms = [
-            ['en'=> 'First grade', 'ar'=> 'الصف الاول'],
-            ['en'=> 'Second grade', 'ar'=> 'الصف الثاني'],
-            ['en'=> 'Third grade', 'ar'=> 'الصف الثالث'],
-        ];
+        // DB::table('classrooms')->delete();
+        // $classrooms = [
+        //     ['en'=> 'First grade', 'ar'=> 'الصف الاول'],
+        //     ['en'=> 'Second grade', 'ar'=> 'الصف الثاني'],
+        //     ['en'=> 'Third grade', 'ar'=> 'الصف الثالث'],
+        // ];
 
-        foreach ($classrooms as $classroom) {
-            Classroom::create([
-            'Name_Class' => $classroom,
-            'Grade_id' => Grade::all()->UNIQUEID()->random()->id
-            ]);
-        }
+        // foreach ($classrooms as $classroom) {
+        //     Classroom::create([
+        //     'Name_Class' => $classroom,
+        //     'Grade_id' => Grade::all()->unique()->random()->id
+        //     ]);
+        // }
     }
 }

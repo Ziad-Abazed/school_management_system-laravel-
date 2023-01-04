@@ -7,7 +7,6 @@ use App\Models\Grade;
 use App\Models\Section;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class SectionsTableSeeder extends Seeder
 {
@@ -18,21 +17,21 @@ class SectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('sections')->delete();
+        // DB::table('sections')->delete();
 
-        $Sections = [
-            ['en' => 'a', 'ar' => 'ا'],
-            ['en' => 'b', 'ar' => 'ب'],
-            ['en' => 'c', 'ar' => 'ت'],
-        ];
+        // $Sections = [
+        //     ['en' => 'a', 'ar' => 'ا'],
+        //     ['en' => 'b', 'ar' => 'ب'],
+        //     ['en' => 'c', 'ar' => 'ت'],
+        // ];
 
-        foreach ($Sections as $section) {
-            Section::create([
-                'Name_Section' => $section,
-                'Status' => 1,
-                'Grade_id' => Grade::all()->UNIQUEID()->random()->id,
-                'Class_id' => Classroom::all()->UNIQUEID()->random()->id
-            ]);
-        }
+        // foreach ($Sections as $section) {
+        //     Section::create([
+        //         'Name_Section' => $section,
+        //         'Status' => 1,
+        //         'Grade_id' => Grade::all()->unique()->random()->id,
+        //         'Class_id' => Classroom::all()->unique()->random()->id
+        //     ]);
+        // }
     }
 }
