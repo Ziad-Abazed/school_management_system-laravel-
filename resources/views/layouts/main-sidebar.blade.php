@@ -118,8 +118,8 @@
                         </ul>
                     </li>
 
-                    <!-- Accounts-->
-                    <li>
+                     <!-- Accounts-->
+                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Accounts-menu">
                             <div class="pull-left"><i class="fas fa-money-bill-wave-alt"></i><span
                                     class="right-nav-text">{{trans('main_trans.Accounts')}}</span></div>
@@ -129,10 +129,9 @@
                         <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('Fees.index')}}">الرسوم الدراسية</a> </li>
                             <li> <a href="{{route('Fees_Invoices.index')}}">الفواتير</a> </li>
+                            <li> <a href="{{route('receipt_students.index')}}">سندات القبض</a> </li>
                         </ul>
                     </li>
-
-
                     <!-- Attendance-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Attendance-icon">
