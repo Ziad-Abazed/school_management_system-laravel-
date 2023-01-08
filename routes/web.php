@@ -5,6 +5,7 @@ use App\Http\Controllers\FeesController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
@@ -87,6 +88,7 @@ Route::view('add_parent','livewire.show_Form');
     Route::resource('Fees', FeesController::class);
     Route::resource('Fees_Invoices', FeesInvoicesController::class);
     Route::resource('receipt_students', ReceiptStudentsController::class);
+    Route::resource('ProcessingFee', ProcessingFeeController::class);
 
     });
 
