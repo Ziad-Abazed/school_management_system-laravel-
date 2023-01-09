@@ -58,7 +58,12 @@ class RepoServiceProvider extends ServiceProvider
                 
             $this->app->bind(
                 'App\Repository\SubjectRepositoryInterface', 
-                'App\Repository\SubjectRepository');     
+                'App\Repository\SubjectRepository');  
+                
+            $this->app->bind(
+                'App\Repository\ExamRepositoryInterface', 
+                'App\Repository\ExamRepository');
+      
     }
 
     /**

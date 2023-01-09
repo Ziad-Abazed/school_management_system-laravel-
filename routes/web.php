@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\ExamController;
 use App\Http\Controllers\FeesController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
@@ -101,6 +102,12 @@ Route::view('add_parent','livewire.show_Form');
     //==============================Subjects============================
 
         Route::resource('subjects', SubjectController::class);
+
+
+
+        //==============================Exams============================
+
+        Route::resource('Exams', ExamController::class);
 
 
     });
