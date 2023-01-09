@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\FeesController;
 use App\Http\Controllers\FeesInvoicesController;
@@ -91,6 +92,7 @@ Route::view('add_parent','livewire.show_Form');
     Route::resource('receipt_students', ReceiptStudentsController::class);
     Route::resource('ProcessingFee', ProcessingFeeController::class);
     Route::resource('Payment_students', PaymentController::class);
+    Route::resource('Attendance', AttendanceController::class);
 
     });
 
