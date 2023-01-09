@@ -12,6 +12,7 @@ use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -93,6 +94,14 @@ Route::view('add_parent','livewire.show_Form');
     Route::resource('ProcessingFee', ProcessingFeeController::class);
     Route::resource('Payment_students', PaymentController::class);
     Route::resource('Attendance', AttendanceController::class);
+
+
+
+
+    //==============================Subjects============================
+
+        Route::resource('subjects', SubjectController::class);
+
 
     });
 

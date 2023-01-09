@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repository\AttendanceRepositoryInterface;
 use Illuminate\Http\Request;
 
 class AttendanceController extends Controller
