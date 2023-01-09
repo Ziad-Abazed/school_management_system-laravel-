@@ -10,6 +10,7 @@ use App\Http\Controllers\GraduatedController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizzController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
@@ -108,6 +109,10 @@ Route::view('add_parent','livewire.show_Form');
      //==============================Quizzes============================
      
         Route::resource('Quizzes', QuizzController::class);
+
+         //==============================questions============================
+
+        Route::resource('questions', QuestionController::class);
 
      
 
