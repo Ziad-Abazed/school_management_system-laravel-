@@ -7,6 +7,7 @@ use App\Http\Controllers\FeesController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\OnlineClasseController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProcessingFeeController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizzController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
@@ -102,6 +104,10 @@ Route::view('add_parent','livewire.show_Form');
      //==============================online_classes============================
     Route::resource('online_classes', OnlineClasseController::class);
 
+        //==============================library============================
+    Route::get('download_file/{filename}',[ LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
+    Route::resource('library', LibraryController::class);
+
 
 
 
@@ -117,6 +123,12 @@ Route::view('add_parent','livewire.show_Form');
          //==============================questions============================
 
         Route::resource('questions', QuestionController::class);
+
+
+
+
+         //==============================Setting============================
+    Route::resource('settings', SettingController::class);
 
      
 
