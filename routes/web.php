@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\FeesController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\OnlineClasseController;
 use App\Http\Controllers\PaymentController;
@@ -39,15 +41,27 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });
-Auth::routes();
+//Auth::routes();
 
-Route::group([
-'middleware'=>['guest']],function(){
-    Route::get('/', function () {
-        return view('auth.login');
-    });
+// Route::group([
+// 'middleware'=>['guest']],function(){
+//     Route::get('/', function () {
+//         return view('auth.login');
+//     });
+// });
+
+Route::get('/', [HomeController::class,'index'])->name('selection');
+
+
+Route::group(['namespace' => 'Auth'], function () {
+
+Route::get('/login/{type}',[LoginController::class,'loginForm'])->middleware('guest')->name('login.show');
+
+Route::post('/login',[LoginController::class,'login'])->name('login');
+Route::get('/logout/{type}', [LoginController::class,'logout'])->name('logout');
+
 });
-
+ //==============================Translate all pages============================
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -57,7 +71,7 @@ Route::group(
         // Route::get('/', function () {
         //     return view('dashboard');
         // });
-       Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+       Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('home');
 
    
 Route::resource('Grades',GradeController::class);
@@ -74,7 +88,7 @@ Route::get('/classes/{id}', [SectionController::class,'getclasses']);
 
 //==============================parents============================
 
-Route::view('add_parent','livewire.show_Form');
+Route::view('add_parent','livewire.show_Form')->name('add_parent');
 
 
  //==============================Teachers============================
