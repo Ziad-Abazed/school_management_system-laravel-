@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TeacherStudentController;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,7 @@ Route::group(
         $data['count_students']= \App\Models\Student::whereIn('section_id',$ids)->count();
         return view('pages.Teachers.dashboard.dashboard',$data);
     });
+
+    Route::get('student',[TeacherStudentController::class,'index'])->name('student.index');
 
 });
