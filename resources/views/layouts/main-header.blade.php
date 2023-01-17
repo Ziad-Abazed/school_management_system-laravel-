@@ -33,7 +33,7 @@ header start-->
             <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               @if (App::getLocale() == 'ar')
               {{ LaravelLocalization::getCurrentLocaleName() }}
-             <img src="{{ URL::asset('assets/images/flags/EG.png') }}" alt="">
+             <img src="{{ URL::asset('assets/images/flags/JO.png') }}" alt="">
               @else
               {{ LaravelLocalization::getCurrentLocaleName() }}
               <img src="{{ URL::asset('assets/images/flags/US.png') }}" alt="">
@@ -51,30 +51,7 @@ header start-->
         <li class="nav-item fullscreen">
             <a id="btnFullscreen" href="#" class="nav-link"><i class="ti-fullscreen"></i></a>
         </li>
-        <li class="nav-item dropdown ">
-            <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">
-                <i class="ti-bell"></i>
-                <span class="badge badge-danger notification-status"> </span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
-                <div class="dropdown-header notifications">
-                    <strong>{{trans('Sidebar_trans.Notifications')}}</strong>
-                    <span class="badge badge-pill badge-warning">05</span>
-                </div>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">New registered user <small
-                        class="float-right text-muted time">Just now</small> </a>
-                <a href="#" class="dropdown-item">New invoice received <small
-                        class="float-right text-muted time">22 mins</small> </a>
-                <a href="#" class="dropdown-item">Server error report<small
-                        class="float-right text-muted time">7 hrs</small> </a>
-                <a href="#" class="dropdown-item">Database report<small class="float-right text-muted time">1
-                        days</small> </a>
-                <a href="#" class="dropdown-item">Order confirmation<small class="float-right text-muted time">2
-                        days</small> </a>
-            </div>
-        </li>
+     
         <li class="nav-item dropdown ">
             <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="true"> <i class=" ti-view-grid"></i> </a>
@@ -91,14 +68,7 @@ header start-->
                         <h5>Assign Task</h5>
                     </a>
                 </div>
-                <div class="nav-grid">
-                    <a href="#" class="nav-grid-item"><i class="ti-pencil-alt text-warning"></i>
-                        <h5>Add Orders</h5>
-                    </a>
-                    <a href="#" class="nav-grid-item"><i class="ti-truck text-danger "></i>
-                        <h5>New Orders</h5>
-                    </a>
-                </div>
+               
             </div>
         </li>
         <li class="nav-item dropdown mr-30">

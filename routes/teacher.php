@@ -34,4 +34,8 @@ Route::group(
 
     Route::get('student',[TeacherStudentController::class,'index'])->name('student.index');
 
+    Route::get('sections',[TeacherStudentController::class,'sections'])->name('sections');
+    Route::post('attendance',[TeacherStudentController::class,'attendance'])->name('attendance');
+
+
 });
