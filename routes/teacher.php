@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TeacherQuizzController;
 use App\Http\Controllers\TeacherStudentController;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
@@ -35,9 +36,16 @@ Route::group(
     Route::get('student',[TeacherStudentController::class,'index'])->name('student.index');
 
     Route::get('sections',[TeacherStudentController::class,'sections'])->name('sections');
+
+
     Route::post('attendance',[TeacherStudentController::class,'attendance'])->name('attendance');
     Route::get('attendance_report',[TeacherStudentController::class,'attendanceReport'])->name('attendance.report');
     Route::post('attendance_report',[TeacherStudentController::class,'attendanceSearch'])->name('attendance.search');
+
+
+    Route::resource('quizzes', TeacherQuizzController::class);
+    Route::get('/Get_classrooms/{id}', [TeacherQuizzController::class,'getClassrooms']);
+    Route::get('/Get_Sections/{id}', [TeacherQuizzController::class,'Get_Sections']);
 
 
 });
