@@ -81,6 +81,8 @@
                                    value="absent">
                             <span class="text-danger">غياب</span>
                         </label>
+
+
                         <input type="hidden" name="teacher_id" value="{{ Auth::user()->id }}">
 
                         <input type="hidden" name="grade_id" value="{{ $student->Grade_id }}">

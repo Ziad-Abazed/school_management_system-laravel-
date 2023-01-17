@@ -9,7 +9,8 @@
                 <div class="clearfix"></div>
             </a>
         </li>
-
+        <!-- menu title -->
+        <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{trans('main_trans.Programname')}} </li>
 
         <!-- الاقسام-->
         <li>
@@ -39,7 +40,7 @@
                 <div class="clearfix"></div>
             </a>
             <ul id="sections-menu" class="collapse" data-parent="#sidebarnav">
-                <li><a href="#">تقرير الحضور والغياب</a></li>
+                <li><a href="{{route('attendance.report')}}">تقرير الحضور والغياب</a></li>
                 <li><a href="#">تقرير الامتحانات</a></li>
             </ul>
 
