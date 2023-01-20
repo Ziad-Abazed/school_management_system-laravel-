@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TeacherOnlineClassesController;
 use App\Http\Controllers\TeacherQuestionController;
 use App\Http\Controllers\TeacherQuizzController;
 use App\Http\Controllers\TeacherStudentController;
@@ -48,6 +49,9 @@ Route::group(
 
 
     Route::resource('questions', TeacherQuestionController::class);
+
+    Route::resource('online_zoom_classes',TeacherOnlineClassesController::class);
+
 
 
 });
