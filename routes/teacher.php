@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TeacherOnlineClassesController;
+use App\Http\Controllers\TeacherProfileController;
 use App\Http\Controllers\TeacherQuestionController;
 use App\Http\Controllers\TeacherQuizzController;
 use App\Http\Controllers\TeacherStudentController;
@@ -51,6 +52,9 @@ Route::group(
     Route::resource('questions', TeacherQuestionController::class);
 
     Route::resource('online_zoom_classes',TeacherOnlineClassesController::class);
+
+    Route::get('profile', [TeacherProfileController::class,'index'])->name('profile.show');
+    Route::post('profile/{id}', [TeacherProfileController::class,'update'])->name('profile.update');
 
 
 

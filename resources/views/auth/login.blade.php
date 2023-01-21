@@ -65,6 +65,12 @@ login-->
                         @else
                             <h3 style="font-family: 'Cairo', sans-serif" class="mb-30">تسجيل دخول ادمن</h3>
                         @endif
+
+                        @if (\Session::has('message'))
+                        <div class="alert alert-danger">
+                         <li>{!! \Session::get('message') !!}</li>
+                        </div>
+                    @endif
                         <form method="POST" action="{{route('login')}}">
                             @csrf
 
@@ -95,13 +101,7 @@ login-->
                                 @enderror
 
                             </div>
-                            <div class="section-field">
-                                <div class="remember-checkbox mb-30">
-                                    <input type="checkbox" class="form-control" name="two" id="two" />
-                                    <label for="two"> تذكرني</label>
-                                    <a href="#" class="float-right">هل نسيت كلمةالمرور ؟</a>
-                                </div>
-                            </div>
+                           
                             <button class="button"><span>دخول</span><i class="fa fa-check"></i></button>
                         </form>
                     </div>
