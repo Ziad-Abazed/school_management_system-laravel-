@@ -16,15 +16,15 @@ class GradeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('grades')->delete();
-        $grades = [
-            ['en'=> 'Primary stage', 'ar'=> 'المرحلة الابتدائية'],
-            ['en'=> 'middle School', 'ar'=> 'المرحلة الاعدادية'],
-            ['en'=> 'High school', 'ar'=> 'المرحلة الثانوية'],
-        ];
+        // DB::table('grades')->delete();
+        // $grades = [
+        //     ['en'=> 'Primary stage', 'ar'=> 'المرحلة الابتدائية'],
+        //     ['en'=> 'middle School', 'ar'=> 'المرحلة الاعدادية'],
+        //     ['en'=> 'High school', 'ar'=> 'المرحلة الثانوية'],
+        // ];
 
-        foreach ($grades as $grade) {
-            Grade::create(['Name' => $grade,'Notes'=>'no notes']);
-        }
+        // foreach ($grades as $grade) {
+        //     Grade::create(['Name' => $grade,'Notes'=>'no notes']);
+        // }
     }
 }

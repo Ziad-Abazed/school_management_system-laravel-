@@ -4,8 +4,8 @@ return[
 
     'Dashboard'=>'Dashboard',
     'Dashboard_page'=>'Dashboard',
-    'Main_title' => 'MoraSoft School Management Program',
-    'Programname' => 'MoraSoft School Management Program',
+    'Main_title'=>' admin dashboard   ',
+    'Programname' => 'E-schole',
     'change_language'=>'language',
     'Grades'=>'Grades',
     'Grades_list'=>'Grades List',

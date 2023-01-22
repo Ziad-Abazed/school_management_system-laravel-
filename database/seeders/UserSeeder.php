@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         DB::table('users')->delete();
         DB::table('users')->insert([
             'name' => 'ziad abazeed',
-            'email' => 'ziadab2017@gmail.com',
+            'email' => 'ziad.ab2017@gmail.com',
             'password' => Hash::make('11111111'),
         ]);
     }

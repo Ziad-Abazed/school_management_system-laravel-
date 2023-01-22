@@ -3,8 +3,8 @@
 return [
     'Dashboard'=>'الرئيسية',
     'Dashboard_page'=>'لوحة التحكم',
-    'Main_title'=>'برنامج مورا سوفت لادارة المدارس',
-    'Programname' => 'برنامج مورا سوفت لادارة المدارس',
+    'Main_title'=>' admin dashboard   ',
+    'Programname' => 'E-schole',
     'change_language'=>'تغير اللغة',
     'Grades'=>'المراحل الدراسية',
     'Grades_list'=>'قائمة المراحل الدراسية',
