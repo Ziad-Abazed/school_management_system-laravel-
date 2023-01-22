@@ -56,6 +56,11 @@ Route::group(
     Route::get('profile', [TeacherProfileController::class,'index'])->name('profile.show');
     Route::post('profile/{id}', [TeacherProfileController::class,'update'])->name('profile.update');
 
+    Route::get('student_quizze/{id}',[TeacherQuizzController::class,'student_quizze'])->name('student.quizze');
+     Route::post('repeat_quizze', [TeacherQuizzController::class,'repeat_quizze'])->name('repeat.quizze');
+
+
+
 
 
 });

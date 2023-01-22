@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentExamsController;
+use App\Http\Controllers\StudentProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -28,5 +29,6 @@ Route::group(
     });
 
     Route::resource('student_exams', StudentExamsController::class);
+    Route::resource('profile-student', StudentProfileController::class);
 
 });
