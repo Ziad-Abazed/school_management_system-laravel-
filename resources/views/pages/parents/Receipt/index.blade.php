@@ -1,13 +1,14 @@
 @extends('layouts.master')
 @section('css')
+    @toastr_css
     @section('title')
-        قائمة نتائج الاختبارات
+        سندات القبض
     @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     @section('PageTitle')
-        قائمة نتائج الاختبارات
+        سندات القبض
     @stop
     <!-- breadcrumb -->
 @endsection
@@ -25,22 +26,20 @@
                                            data-page-length="50"
                                            style="text-align: center">
                                         <thead>
-                                        <tr>
+                                        <tr class="alert-success">
                                             <th>#</th>
-                                            <th>اسم الطالب</th>
-                                            <th>اسم الاختبار</th>
-                                            <th>الدرجة</th>
-                                            <th>تاريخ اجراء الاختبار</th>
+                                            <th>الاسم</th>
+                                            <th>المبلغ</th>
+                                            <th>البيان</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($degrees as $degree)
+                                        @foreach($receipt_students as $receipt_student)
                                             <tr>
-                                                <td>{{ $loop->iteration}}</td>
-                                                <td>{{$degree->student->name}}</td>
-                                                <td>{{$degree->quizze->name}}</td>
-                                                <td>{{$degree->score}}</td>
-                                                <td>{{$degree->date}}</td>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{$receipt_student->student->name}}</td>
+                                                <td>{{ number_format($receipt_student->Debit, 2) }}</td>
+                                                <td>{{$receipt_student->description}}</td>
                                             </tr>
                                         @endforeach
                                     </table>
@@ -55,5 +54,6 @@
     <!-- row closed -->
 @endsection
 @section('js')
-
+    @toastr_js
+    @toastr_render
 @endsection

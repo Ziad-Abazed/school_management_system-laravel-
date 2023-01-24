@@ -34,6 +34,9 @@ Route::group(
     Route::get('attendances', [ParentChildrenController::class,'attendances'])->name('sons.attendances');
     Route::post('attendances',[ParentChildrenController::class,'attendanceSearch'])->name('sons.attendance.search');
 
+    Route::get('fees', [ParentChildrenController::class,'fees'])->name('sons.fees');
+    Route::get('receipt/{id}', [ParentChildrenController::class,'receiptStudent'])->name('sons.receipt');
+
  
 
 });
