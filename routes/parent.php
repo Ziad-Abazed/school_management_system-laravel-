@@ -37,6 +37,9 @@ Route::group(
     Route::get('fees', [ParentChildrenController::class,'fees'])->name('sons.fees');
     Route::get('receipt/{id}', [ParentChildrenController::class,'receiptStudent'])->name('sons.receipt');
 
+    Route::get('profile/parent', [ParentChildrenController::class,'profile'])->name('profile.show.parent');
+    Route::post('profile/parent/{id}', [ParentChildrenController::class,'update'])->name('profile.update.parent');
+
  
 
 });
