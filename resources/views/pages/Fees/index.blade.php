@@ -2,14 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    الرسوم الدراسية
+{{trans('trans_gen.studyingfees')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    الرسوم الدراسية
-@stop
+{{trans('trans_gen.studyingfees')}}
 <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -22,7 +21,7 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('Fees.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة رسوم جديدة</a><br><br>
+                                   aria-pressed="true">{{trans('trans_gen.Addfees')}}  </a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -30,13 +29,13 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>المبلغ</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>السنة الدراسية</th>
-                                            <th>ملاحظات</th>
-                                            <th>العمليات</th>
+                                            <th> {{trans('trans_gen.thename')}}</th>
+                                            <th>{{trans('trans_gen.amount')}}</th>
+                                            <th>{{trans('trans_gen.grade_name')}} </th>
+                                            <th>  {{trans('trans_gen.classroom')}}</th>
+                                            <th> {{trans('trans_gen.year')}}</th>
+                                            <th>{{trans('trans_gen.Notes')}}</th>
+                                            <th>{{ trans('Grades_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

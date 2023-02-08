@@ -44,7 +44,7 @@
 
 
             <br><br>
-
+{{-- 
                 <form action="{{ route('Filter_Classes') }}" method="POST">
                     {{ csrf_field() }}
                     <select class="selectpicker" data-style="btn-info" name="Grade_id" required
@@ -54,7 +54,7 @@
                             <option value="{{ $Grade->id }}">{{ $Grade->Name }}</option>
                         @endforeach
                     </select>
-                </form>
+                </form> --}}
 
 
 

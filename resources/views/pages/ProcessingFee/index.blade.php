@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    معالجات الرسوم الدراسية
+{{trans('trans_gen.Tuitionfees')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-  معالجات الرسوم الدراسية
+{{trans('trans_gen.Tuitionfees')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -28,10 +28,10 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>المبلغ</th>
-                                            <th>البيان</th>
-                                            <th>العمليات</th>
+                                            <th>{{trans('trans_gen.thename')}}</th>
+                                            <th>{{trans('trans_gen.amount')}} </th>
+                                            <th>{{trans('trans_gen.Statement')}} </th>
+                                            <th>{{ trans('Sections_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

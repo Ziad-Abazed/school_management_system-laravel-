@@ -38,7 +38,16 @@ return [
     'previous_class'=>'الصف الدراسي السابق',
     'previous_academic_section'=>'القسم الدراسي السابق',
     'previous_academic_year'=>'السنة الدراسية السابقة',
-    'previous_school_stage'=>'المرحلة الدراسية السابقة'
+    'current_academic_year'=>'السنة الدراسية الحالية',
+    'previous_school_stage'=>'المرحلة الدراسية السابقة',
+    'AttendanceList'=>'قائمة الحضور والغياب للطلاب',
+    'todaydate'=>'تاريخ اليوم ',
+    'absence'=>'غياب',
+    'Attend'=>'حضور',
+    'new_school_stage'=>'المرحلة الدراسية الجديدة',
+    'retratstd'=>'هل انت متاكد من عملية تراجع الطالب ؟ ',
+    'retreatstdall'=>'>هل انت متأكد من عملية تراجع كافة الطلاب ؟',
+
 
 
 ];

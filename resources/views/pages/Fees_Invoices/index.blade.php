@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    الفواتير الدراسية
+{{trans('trans_gen.studyinvoices')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-   الفواتير الدراسية
+{{trans('trans_gen.studyinvoices')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -28,13 +28,13 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>نوع الرسوم</th>
-                                            <th>المبلغ</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>البيان</th>
-                                            <th>العمليات</th>
+                                            <th>{{ trans('trans_gen.thename') }}</th>
+                                            <th>{{trans('trans_gen.feestype')}} </th>
+                                            <th>{{trans('trans_gen.amount')}}</th>
+                                            <th> {{trans('trans_gen.grade_name')}}</th>
+                                            <th>  {{trans('trans_gen.classroom')}}</th>
+                                            <th>{{trans('trans_gen.Statement')}}</th>
+                                            <th>{{ trans('Grades_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

@@ -12,7 +12,13 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
+    'TestSuccessfully'=>'تم اجراء الامتحان بنجاح',
+    'Testcanceledsystem'=>'تم إلغاء الاختبار لإكتشاف تلاعب بالنظام',
+    'examopen'=>'تم فتح الامتحان مرة اخرة للطالب',
+    'yyyy-mm-dd'=>'صيغة التاريخ يجب ان تكون yyyy-mm-dd',
+    'to_after_equal'=>'تاريخ النهاية لابد ان اكبر من تاريخ البداية او يساويه',
+    'errorcode'=>'يوجد خطا في كود الطالب',
+    'NoDataStudent'=>'لا يوجد بيانات للطالب ',
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',

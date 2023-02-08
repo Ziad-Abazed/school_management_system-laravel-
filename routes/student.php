@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AttendStudentController;
+use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\StudentExamsController;
 use App\Http\Controllers\StudentProfileController;
 use Illuminate\Http\Request;
@@ -30,5 +32,10 @@ Route::group(
 
     Route::resource('student_exams', StudentExamsController::class);
     Route::resource('profile-student', StudentProfileController::class);
+    Route::resource('attendancesstd', AttendStudentController::class);
+      //==============================library============================
+      Route::get('download_file/{filename}',[ LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
+      Route::resource('library', LibraryController::class);
+  
 
 });

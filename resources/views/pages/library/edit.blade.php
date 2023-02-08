@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    تعديل كتاب {{$book->title}}
+{{trans('trans_gen.edit')}}{{$book->title}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    تعديل كتاب {{$book->title}}
+{{trans('trans_gen.edit')}}{{$book->title}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -36,7 +36,7 @@
                                 <div class="form-row">
 
                                     <div class="col">
-                                        <label for="title">اسم الكتاب</label>
+                                        <label for="title">{{trans('trans_gen.namebook')}} </label>
                                         <input type="text" name="title" value="{{$book->title}}" class="form-control">
                                         <input type="hidden" name="id" value="{{$book->id}}" class="form-control">
                                     </div>
@@ -82,14 +82,14 @@
                                         <embed src="{{ URL::asset('attachments/library/'.$book->file_name) }}" type="application/pdf"   height="150px" width="100px"><br><br>
 
                                         <div class="form-group">
-                                            <label for="academic_year">المرفقات : <span class="text-danger">*</span></label>
+                                            <label for="academic_year">{{trans('trans_gen.attachments')}} : <span class="text-danger">*</span></label>
                                             <input type="file" accept="application/pdf"  name="file_name">
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">حفظ البيانات</button>
+                                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('trans_gen.submit')}} </button>
                             </form>
                         </div>
                     </div>

@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
     @section('title')
-        سندات القبض
+    {{trans('trans_gen.receipt')}}
     @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     @section('PageTitle')
-        سندات القبض
+    {{trans('trans_gen.receipt')}}
     @stop
     <!-- breadcrumb -->
 @endsection
@@ -28,9 +28,9 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>المبلغ</th>
-                                            <th>البيان</th>
+                                            <th> {{trans('trans_gen.thename')}}</th>
+                                            <th>    {{trans('trans_gen.amount')}}</th>
+                                            <th> {{trans('trans_gen.Statement')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

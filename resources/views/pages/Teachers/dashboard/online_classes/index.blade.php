@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    حصص اونلاين
+{{trans('trans_gen.Onlineclasses')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    حصص اونلاين
+{{trans('trans_gen.Onlineclasses')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -30,15 +30,19 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>المرحلة</th>
-                                            <th>الصف</th>
-                                            <th>القسم</th>
-                                            <th>المعلم</th>
-                                            <th>عنوان الحصة</th>
-                                            <th>تاريخ البداية</th>
-                                            <th>وقت الحصة</th>
-                                            <th>رابط الحصة</th>
-                                            <th>العمليات</th>
+                                            <th> {{trans('Students_trans.Grade')}} </th>
+                                            <th> {{trans('Students_trans.classrooms')}} </th>
+                                            <th>{{ trans('main_trans.sections') }}</th>
+                                            <th>{{trans('trans_gen.teachername')}} </th>
+                                            <th> {{trans('trans_gen.titleclasses')}}</th>
+                                            <th> {{trans('trans_gen.startdate')}}</th>
+                                            <th> {{trans('trans_gen.classduration')}}</th>
+                                            <th>{{trans('trans_gen.linkclasses')}} </th>
+                                            <th>{{ trans('My_Classes_trans.Processes') }}</th>
+                                            
+                                           
+                                         
+                                        
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -52,7 +56,7 @@
                                                 <td>{{$online_classe->topic}}</td>
                                                 <td>{{$online_classe->start_at}}</td>
                                                 <td>{{$online_classe->duration}}</td>
-                                                <td class="text-danger"><a href="{{$online_classe->join_url}}" target="_blank">انضم الان</a></td>
+                                                <td class="text-danger"><a href="{{$online_classe->join_url}}" target="_blank"> {{trans('trans_gen.join')}}</a></td>
                                                 <td>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#Delete_receipt{{$online_classe->meeting_id}}" ><i class="fa fa-trash"></i></button>
                                                 </td>

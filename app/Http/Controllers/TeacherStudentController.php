@@ -79,9 +79,9 @@ class TeacherStudentController extends Controller
             'from'  =>'required|date|date_format:Y-m-d',
             'to'=> 'required|date|date_format:Y-m-d|after_or_equal:from'
         ],[
-            'to.after_or_equal' => 'تاريخ النهاية لابد ان اكبر من تاريخ البداية او يساويه',
-            'from.date_format' => 'صيغة التاريخ يجب ان تكون yyyy-mm-dd',
-            'to.date_format' => 'صيغة التاريخ يجب ان تكون yyyy-mm-dd',
+            'to.after_or_equal' => trans('validation.to_after_equal'),
+            'from.date_format' => trans('validation.yyyy-mm-dd'),
+            'to.date_format' => trans('validation.yyyy-mm-dd'),
         ]);
 
 

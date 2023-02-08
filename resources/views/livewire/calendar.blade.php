@@ -27,9 +27,9 @@
                             });
                             var eventAdd = {title: title,start: date};
                         @this.addevent(eventAdd);
-                            alert('تم اضافة الحدث بنجاح');
+                            alert({{trans('messages.addevent')}});
                         }else{
-                            alert('من فضلك ادخل عنوان الحدث');
+                            alert({{trans('messages.title_event')}});
                         }
                     },
                     editable: true,

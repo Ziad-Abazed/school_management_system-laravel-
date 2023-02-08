@@ -29,34 +29,7 @@
                             </div>
                         @endif
 
-                        <form method="post"  action="{{ route('sons.attendance.search') }}" autocomplete="off">
-                            @csrf
-                            <h6 style="font-family: 'Cairo', sans-serif;color: blue"> {{trans('trans_gen.Searchinformation')}}</h6><br>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="student">{{trans('trans_gen.students')}}</label>
-                                        <select class="custom-select mr-sm-2" name="student_id">
-                                            <option value="0">{{trans('trans_gen.all')}}</option>
-                                            @foreach($students as $student)
-                                                <option value="{{ $student->id }}">{{ $student->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="card-body datepicker-form">
-                                    <div class="input-group" data-date-format="yyyy-mm-dd">
-                                        <input type="text"  class="form-control range-from date-picker-default" placeholder={{trans('trans_gen.from')}} required name="from">
-                                        <span class="input-group-addon">{{trans('trans_gen.to')}} </span>
-                                        <input class="form-control range-to date-picker-default" placeholder={{trans('trans_gen.to')}} type="text" required name="to">
-                                    </div>
-                                </div>
-
-                            </div>
-                            <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('Students_trans.submit')}}</button>
-                        </form>
-                        @isset($Students)
+                      
                             <div class="table-responsive">
                                 <table id="datatable" class="table  table-hover table-sm table-bordered p-0" data-page-length="50"
                                        style="text-align: center">
@@ -71,7 +44,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($Students as $student)
+                                    @foreach($Attendance as $student)
                                         <tr>
                                             <td>{{ $loop->index+1 }}</td>
                                             <td>{{$student->students->name}}</td>
@@ -91,7 +64,7 @@
                                     @endforeach
                                 </table>
                             </div>
-                        @endisset
+                       
 
                     </div>
                 </div>

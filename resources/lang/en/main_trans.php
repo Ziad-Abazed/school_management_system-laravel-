@@ -34,7 +34,27 @@ return[
     'Users'=>'Users',
     'Copyright' => 'Copyright',
     'Name_Programer' => 'Ziad Abazeed ',
-    'Students_Promotions_management'=>'Students Promotions management'
+    'Students_Promotions_management'=>'Students Promotions management',
+    'fees'=>'Fees',
+    'Invoices'=>'Invoices',
+    'receipt'=>'receipt',
+    'Excludedfee'=>'Excluded fee',
+    'Billsofexchange'=>' Bills of exchange',
+    'listOfStudents'=>'list Of Students',
+    'Subjects'=>'Subjects',
+    'ListSubjects'=>'ListSubjects',
+    'tests'=>'Tests',
+    'Listquestions'=>'List of Questions',
+    'listTest'=>'List of Exams',
+    'listbooks'=>'List of Books',
+    'Financialreport'=>'Financial report',
+    'Profile'=>'Profile',
+    'Attendancereport'=>'Attendance report',
+    'reports'=>'Reports',
+    'Examsreport'=>'Exams report',
+    'addexam'=>'add new exam',
+    'addnewsub'=>'add new subject',
+    'status'=>'status',
 
 ];
 ?>

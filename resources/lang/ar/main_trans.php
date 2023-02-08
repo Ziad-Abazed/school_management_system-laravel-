@@ -36,7 +36,29 @@ return [
     'Users'=>'المستخدمين',
     'Copyright' => 'جميع الحقوق محفوظة ',
     'Name_Programer' => 'زياد ابازيد',
-    'Students_Promotions_management'=>'ادارة ترقية الطلاب'
+    'Students_Promotions_management'=>'ادارة ترقية الطلاب',
+    'fees'=>'الرسوم الدراسية',
+    'Invoices'=>'الفواتير',
+    'receipt'=>'سندات القبض',
+    'Excludedfee'=>'استبعاد رسوم ',
+    'Billsofexchange'=>'سندات الصرف',
+    'listOfStudents'=>'قائمة الطلاب',
+    'Subjects'=>'المواد الدراسية',
+    'ListSubjects'=>'قائمة المواد ',
+    'tests'=>'الاختبارات',
+    'Listquestions'=>'قائمة الاسئلة ',
+    'listTest'=>'قائمة الاختبارات',
+    'listbooks'=>'قائمة الكتب',
+    'Financialreport'=>'تقرير المالية ',
+    'Profile'=>'الملف الشخصي',
+    'Attendancereport'=>'تقرير الحضور والغياب ',
+    'reports'=>'التقارير',
+    'Examsreport'=>' تقرير الامتحانات ',
+    'addexam'=>'اضافة اختبار جديد',
+    'addnewsub'=>'اضافة مادة جديدة',
+'status'=>'الحالة'
+   
+
 
 
 ];

@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @section('css')
     @section('title')
-        قائمة نتائج الاختبارات
+    {{trans('trans_gen.Listtestresults')}}
     @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     @section('PageTitle')
-        قائمة نتائج الاختبارات
+    {{trans('trans_gen.Listtestresults')}}
     @stop
     <!-- breadcrumb -->
 @endsection
@@ -27,10 +27,10 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>اسم الطالب</th>
-                                            <th>اسم الاختبار</th>
-                                            <th>الدرجة</th>
-                                            <th>تاريخ اجراء الاختبار</th>
+                                            <th> {{trans('trans_gen.stdname')}}</th>
+                                            <th> {{trans('trans_gen.testname')}}</th>
+                                            <th>{{trans('trans_gen.mark')}}</th>
+                                            <th>    {{trans('trans_gen.Thedatetest')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

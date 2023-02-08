@@ -38,7 +38,13 @@ return [
     'previous_class' => 'previous class',
     'previous_academic_section' => 'previous academic section',
     'previous_academic_year' => 'previous academic year',
-    'previous_school_stage' => 'previous school stage'
+    'previous_school_stage' => 'previous school stage',
+    'AttendanceList'=>'Attendance and absence list for students',
+    'todaydate'=>'today date',
+    'absence'=>'absence',
+    'Attend'=>'Attend',
+    'new_school_stage'=>'new school stage',
+    'retreatstdall'=>'Are you sure about the process of retracting all students?',
 
 
 

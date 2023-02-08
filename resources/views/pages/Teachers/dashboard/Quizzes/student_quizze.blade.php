@@ -2,14 +2,14 @@
 @section('css')
     @toastr_css
     @section('title')
-        قائمة الطلاب المختبره
-    @stop
+    {{trans('trans_gen.Listtestedstudents')}} 
+       @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     @section('PageTitle')
-        قائمة الطلاب المختبره
-    @stop
+    {{trans('trans_gen.Listtestedstudents')}} 
+        @stop
     <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -28,12 +28,12 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>اسم الطالب</th>
-                                            <th>اخر سؤال</th>
-                                            <th>الدرجة</th>
-                                            <th>تلاعب</th>
-                                            <th>تاريخ اجراء الاختبار</th>
-                                            <th>العمليات</th>
+                                            <th> {{trans('trans_gen.stdname')}}</th>
+                                            <th> {{trans('trans_gen.lastQ')}}</th>
+                                            <th>{{trans('trans_gen.mark')}}</th>
+                                            <th>{{trans('trans_gen.violation')}}</th>
+                                            <th>  {{trans('trans_gen.Thedatetest')}} </th>
+                                            <th>{{ trans('My_Classes_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -44,9 +44,9 @@
                                                 <td>{{$degree->question_id}}</td>
                                                 <td>{{$degree->score}}</td>
                                                 @if($degree->abuse == 0)
-                                                    <td style="color: green">لا يوجد تلاعب</td>
+                                                    <td style="color: green">{{trans('trans_gen.noviolation')}}  </td>
                                                 @else
-                                                    <td style="color: red"> يوجد تلاعب</td>
+                                                    <td style="color: red">  {{trans('trans_gen.thereviolation')}}</td>
                                                 @endif
                                                 <td>{{$degree->date}}</td>
                                                 <td>
@@ -66,7 +66,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h5 style="font-family: 'Cairo', sans-serif;"
-                                                                    class="modal-title" id="exampleModalLabel">فتح إعادة الاختبار للطالب</h5>
+                                                                    class="modal-title" id="exampleModalLabel">   {{trans('trans_gen.openexam')}}</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                         aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>

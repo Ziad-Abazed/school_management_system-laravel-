@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'parent'=>'parent ',
     'add_parent' => 'add parent',
     'Step1' => 'Father information',
     'Step2' => 'Mother information',

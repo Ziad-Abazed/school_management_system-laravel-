@@ -116,8 +116,8 @@ class AddParent extends Component
         try {
             $My_Parent = new My_Parent();
             // Father_INPUTS
-            $My_Parent->email = $this->Email;
-            $My_Parent->password = Hash::make($this->Password);
+            $My_Parent->email = $this->email;
+            $My_Parent->password = Hash::make($this->password);
             $My_Parent->Name_Father = ['en' => $this->Name_Father_en, 'ar' => $this->Name_Father];
             $My_Parent->National_ID_Father = $this->National_ID_Father;
             $My_Parent->Passport_ID_Father = $this->Passport_ID_Father;

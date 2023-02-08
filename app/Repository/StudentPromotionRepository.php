@@ -34,7 +34,7 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
             $students = student::where('Grade_id',$request->Grade_id)->where('Classroom_id',$request->Classroom_id)->where('section_id',$request->section_id)->where('academic_year',$request->academic_year)->get();
 
             if($students->count() < 1){
-                return redirect()->back()->with('error_promotions', __('لاتوجد بيانات في جدول الطلاب'));
+                return redirect()->back()->with('error_promotions', __( trans('validation.NoDataStudent')));
             }
 
             // update in table student

@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    قائمة الاختبارات
+{{trans('main_trans.listTest')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    قائمة الاختبارات
+{{trans('main_trans.listTest')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -22,7 +22,7 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('quizzes.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة اختبار جديد</a><br><br>
+                                   aria-pressed="true">  {{trans('main_trans.addexam')}}</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -30,12 +30,12 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>اسم الاختبار</th>
-                                            <th>اسم المعلم</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>القسم</th>
-                                            <th>العمليات</th>
+                                            <th> {{trans('trans_gen.examname')}}</th>
+                                            <th>{{trans('trans_gen.teachername')}} </th>
+                                            <th> {{trans('Students_trans.Grade')}} </th>
+                                            <th> {{trans('Students_trans.classrooms')}} </th>
+                                            <th>{{ trans('main_trans.sections') }}</th>
+                                            <th>{{ trans('My_Classes_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -77,7 +77,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h5 style="font-family: 'Cairo', sans-serif;"
-                                                                    class="modal-title" id="exampleModalLabel">حذف اختبار</h5>
+                                                                    class="modal-title" id="exampleModalLabel">{{ trans('trans_gen.del') }} </h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                         aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>

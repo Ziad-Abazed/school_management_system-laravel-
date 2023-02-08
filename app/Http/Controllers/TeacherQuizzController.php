@@ -107,7 +107,7 @@ class TeacherQuizzController extends Controller
     public function repeat_quizze(Request $request)
     {
         Degree::where('student_id', $request->student_id)->where('quizze_id', $request->quizze_id)->delete();
-        toastr()->success('تم فتح الاختبار مرة اخرى للطالب');
+        toastr()->success(trans('validation.examopen'));
         return redirect()->back();
     }
 }

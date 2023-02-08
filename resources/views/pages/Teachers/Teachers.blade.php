@@ -31,10 +31,11 @@
                                         <tr>
                                             <th>#</th>
                                             <th>{{trans('Teacher_trans.Name_Teacher')}}</th>
+                                            <th>{{ trans('Parent_trans.Email') }}</th>
                                             <th>{{trans('Teacher_trans.Gender')}}</th>
                                             <th>{{trans('Teacher_trans.Joining_Date')}}</th>
                                             <th>{{trans('Teacher_trans.specialization')}}</th>
-                                            <th>العمليات</th>
+                                            <th>{{ trans('My_Classes_trans.Processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -44,6 +45,7 @@
                                             <?php $i++; ?>
                                             <td>{{ $i }}</td>
                                             <td>{{$Teacher->Name}}</td>
+                                            <td>{{$Teacher->email}}</td>
                                             <td>{{$Teacher->genders->Name}}</td>
                                             <td>{{$Teacher->Joining_Date}}</td>
                                             <td>{{$Teacher->specializations->Name}}</td>

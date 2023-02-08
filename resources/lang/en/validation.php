@@ -12,7 +12,14 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
+    'TestSuccessfully'=>'Test completed successfully',
+    'Testcanceledsystem'=>'Test canceled due to detection of system tampering.',
+    'examopen'=>'The exam has been opened again for students',
+    'to_after_equal'=>'The end date must be greater than or equal to the start date ',
+    'yyyy-mm-dd'=>'the date must be yyyy-mm-dd',
 
+    'NoDataStudent'=>'There is no data for the student',
+    'errorcode'=>'There is an error in the requestor code',
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',

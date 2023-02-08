@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    تعديل رسوم دراسية
+{{trans('trans_gen.edit')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    تعديل رسوم دراسية
+{{trans('trans_gen.edit')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -34,19 +34,19 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة العربية</label>
+                                <label for="inputEmail4">   {{trans('trans_gen.ar_name')}}</label>
                                 <input type="text" value="{{$fee->getTranslation('title','ar')}}" name="title_ar" class="form-control">
                                 <input type="hidden" value="{{$fee->id}}" name="id" class="form-control">
                             </div>
 
                             <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة الانجليزية</label>
+                                <label for="inputEmail4">   {{trans('trans_gen.en_name')}}</label>
                                 <input type="text" value="{{$fee->getTranslation('title','en')}}" name="title_en" class="form-control">
                             </div>
 
 
                             <div class="form-group col">
-                                <label for="inputEmail4">المبلغ</label>
+                                <label for="inputEmail4">{{trans('trans_gen.amount')}}</label>
                                 <input type="number" value="{{$fee->amount}}" name="amount" class="form-control">
                             </div>
 
@@ -56,7 +56,7 @@
                         <div class="form-row">
 
                             <div class="form-group col">
-                                <label for="inputState">المرحلة الدراسية</label>
+                                <label for="inputState"> {{trans('trans_gen.grade_name')}}</label>
                                 <select class="custom-select mr-sm-2" name="Grade_id">
                                     @foreach($Grades as $Grade)
                                         <option value="{{ $Grade->id }}" {{$Grade->id == $fee->Grade_id ? 'selected' : ""}}>{{ $Grade->Name }}</option>
@@ -65,13 +65,13 @@
                             </div>
 
                             <div class="form-group col">
-                                <label for="inputZip">الصف الدراسي</label>
+                                <label for="inputZip">  {{trans('trans_gen.classroom')}}</label>
                                 <select class="custom-select mr-sm-2" name="Classroom_id">
                                     <option value="{{$fee->Classroom_id}}">{{$fee->classroom->Name_Class}}</option>
                                 </select>
                             </div>
                             <div class="form-group col">
-                                <label for="inputZip">السنة الدراسية</label>
+                                <label for="inputZip"> {{trans('trans_gen.year')}}</label>
                                 <select class="custom-select mr-sm-2" name="year">
                                     @php
                                         $current_year = date("Y")
@@ -84,13 +84,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputAddress">ملاحظات</label>
+                            <label for="inputAddress">{{trans('trans_gen.Notes')}}</label>
                             <textarea class="form-control" name="description" id="exampleFormControlTextarea1"
                                       rows="4">{{$fee->description}}</textarea>
                         </div>
                         <br>
 
-                        <button type="submit" class="btn btn-primary">تاكيد</button>
+                        <button type="submit" class="btn btn-primary">{{trans('trans_gen.submit')}}</button>
 
                     </form>
 

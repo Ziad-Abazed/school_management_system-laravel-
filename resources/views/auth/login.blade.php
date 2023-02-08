@@ -44,7 +44,7 @@ login-->
             <div class="row justify-content-center no-gutters vertical-align">
                 <div class="col-lg-4 col-md-6 login-fancy-bg bg"
                      style="background-image: url('{{ asset('assets/images/login-inner-bg.jpg')}}');">
-                    <div class="login-fancy">
+                    {{-- <div class="login-fancy">
                         <h2 class="text-white mb-20">Hello world!</h2>
                         <p class="mb-20 text-white">Create tailor-cut websites with the exclusive multi-purpose
                             responsive template along with powerful features.</p>
@@ -52,7 +52,7 @@ login-->
                             <li class="list-inline-item"><a class="text-white" href="#"> Terms of Use</a> </li>
                             <li class="list-inline-item"><a class="text-white" href="#"> Privacy Policy</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-lg-4 col-md-6 bg-white">
                     <div class="login-fancy pb-40 clearfix">
